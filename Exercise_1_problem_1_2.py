@@ -40,7 +40,7 @@ def create_line_geom(points):
   purpose:create line
   """
   assert type(points)=="Input should be a list!"
-  assert len(points)>=2, "LineString object requires at least two points!"
+  assert len(points)>=2, "LineString object requires at least two Points!"
   line = LineString([points[0],points[1]])
   return line
 
@@ -82,10 +82,10 @@ except Exception as e:
 def create_poly_geom(coords):
   """
   prameter:coords
-  purpose:create polygon
+  purpose:create Polygon
   """
   assert type(coords) is list,"Input should be a list!"
-  assert len(coords) >= 3,"polygon object requires at least three points!"
+  assert len(coords) >= 3,"Polygon object requires at least three points!"
   for i in coords:
     assert type(i) is tuple,"All list values should be coordinate tuples!"
     poly = Polygon(coords)
